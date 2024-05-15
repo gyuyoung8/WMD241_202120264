@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.navigation {
+  font-size: 1.5rem;
+  background-color: #000;
+  color: #fff;
+  padding-inline: 30px;
+  padding-block: 19px;
+}
+.navigation__container {
+  width: 90%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.navigation__menu-group {
+  display: flex;
+  align-items: center;
+}
+.navigation__menu-group--left {
+  gap: 13px;
+}
+.navigation__menu-group--right {
+  gap: 16px;
+}
+@media (width < 900px) {
+  .navigation__menu-group--right {
+    display: none;
+  }
+}
+.navigation__logo {
+  height: 2rem;
+  aspect-ratio: 200/51;
+}
+.navigation__page-title {
+  margin-top: 3px;
+  padding-top: 3px;
+  padding-left: 0.8125rem;
+  line-height: 23px;
+  border-left: 0.125rem solid #fff;
+}
+.navigation__btn {
+  padding-inline: 1.4375rem;
+  padding-block: 0.4375rem;
+  line-height: 2.25rem;
+  border-radius: 0.5rem;
+}
+.navigation__btn--outline {
+  border: 1px solid #fff;
+  background-color: #191a1b;
+}
+.navigation__btn--fill {
+  background-color: #515fcd;
+}
+
+.hero {
+  background-color: #dadbee;
+  padding-inline: 1.875rem;
+  padding-block: 5rem 7.1875rem;
+}
+.hero__container {
+  width: 90%;
+  margin-inline: auto;
+}
+.hero__text {
+  font-size: 80px;
+  line-height: 7.5rem;
+  text-align: center;
+  width: 80%;
+  margin-inline: auto;
+}
+.hero__search-input {
+  border-radius: 4px;
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid #000;
+  background-color: #fff;
+  font-size: 24px;
+  line-height: 32px;
+  display: block;
+  margin-inline: auto;
+  width: 80%;
+}
+
+.feature {
+  padding: 1.875rem;
+}
+.feature__container {
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+  row-gap: 3rem;
+  width: 80%;
+  margin-inline: auto;
+  padding-left: 0;
+  list-style: none;
+  margin-block: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.feature__container > * {
+  flex-basis: 0;
+  flex-grow: 1;
+  min-width: 25rem;
+}
+
+.card {
+  display: flex;
+  gap: 1.875rem;
+  padding-top: 3rem;
+}
+.card__img {
+  max-width: 5rem;
+}
