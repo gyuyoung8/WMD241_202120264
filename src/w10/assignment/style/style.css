@@ -265,7 +265,7 @@ body {
   width: 195px;
   min-width: 195px;
   margin-bottom: 64px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-columns: minmax(10px, auto);
   -moz-column-gap: 30px;
        column-gap: 30px;
   row-gap: 30px;

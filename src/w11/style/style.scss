@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.btn {
+  cursor: pointer;
+  max-width: fit-content;
+  padding-inline: 16px;
+  padding-block: 8px 6px;
+  font-size: 14px;
+  line-height: 14px;
+  background-color: oklch(0.4 0.1 150);
+  color: oklch(0.9 0.1 150);
+  text-transform: capitalize;
+  border-radius: 64rem;
+  // for dev
+  //   border: .0625rem solid #fff;
+  margin-top: 1.25rem;
+  transition: all 300ms ease-out;
+
+  &:hover {
+    background-color: oklch(0.4 0.1 240);
+    color: oklch(0.9 0.1 240);
+  }
+
+  &--type {
+    &-elevated {
+      background-color: oklch(0.95 0.0025 150);
+      color: oklch(0.45 0.1 150);
+      box-shadow: 0rem 0.25rem 0.25rem 0rem oklch(0.8 0.002 150);
+      &:hover {
+        background-color: oklch(0.95 0.0025 240);
+        color: oklch(0.45 0.1 240);
+        box-shadow: 0rem 0.125rem 0.125rem 0rem oklch(0.8 0.002 150);
+      }
+    }
+    &-tonal {
+      background-color: oklch(0.8 0.05 150);
+      color: oklch(0.3 0.1 150);
+    }
+    &-outline {
+      color: oklch(0.4 0.1 150);
+      background-color: unset;
+      border: 0.0625rem solid oklch(0.5 0 150);
+    }
+    &-text {
+      padding-inline: 0.75rem;
+      color: oklch(0.4 0.1 150);
+      background-color: unset;
+
+      &:hover {
+        background-color: unset;
+        color: oklch(1 0 150);
+        animation-name: "rainbow";
+        animation-duration: 5000ms;
+        animation-iteration-count: 4;
+        animation-fill-mode: both;
+      }
+    }
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    background-color: oklch(0.5 0.2 0);
+    transform: translate(0rem, 0rem);
+  }
+
+  25% {
+    transform: translate(1rem, 0rem);
+  }
+
+  50% {
+    transform: translate(1rem, 1rem);
+  }
+
+  75% {
+    transform: translate(0rem, 1rem);
+  }
+
+  100% {
+    background-color: oklch(0.5 0.2 240);
+    transform: translate(0rem 0rem);
+  }
+}

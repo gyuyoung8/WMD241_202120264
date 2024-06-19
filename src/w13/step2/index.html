@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lottie embeding</title>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <div class="section">
+      <div class="container">
+        <h1>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
+          aliquam!
+        </h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+          pariatur, a eius laborum vero dolorem ipsum, debitis nobis itaque sit
+          rerum. Alias eligendi quod ab quidem facere cupiditate beatae quaerat,
+          mollitia, atque doloremque harum quos numquam esse totam nulla
+          perferendis dicta praesentium? Animi delectus inventore nesciunt
+          labore exercitationem aspernatur blanditiis.
+        </p>
+        <dotlottie-player
+          id="lottie-1"
+          class="lottie"
+          src="./assets/lottie-downloaded.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay
+        ></dotlottie-player>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          aspernatur nobis doloribus id soluta cumque incidunt nesciunt
+          voluptatum hic! Explicabo?
+        </p>
+        <lottie-player
+          id="lottie-2s"
+          class="lottie"
+          src="./assets/lottie-downloaded.json"
+          background="transparent"
+          speed="0.5"
+        ></lottie-player>
+        <script>
+          LottieInteractivity.create({
+            player: "#lottie-2",
+            mode: "cursor",
+            actions: [
+              {
+                type: "click",
+                forceFlag: false,
+              },
+            ],
+          });
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
